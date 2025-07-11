@@ -70,6 +70,58 @@
                 }
             ]
         },
+        "DisableDiscoverWhatsNew": {
+            "title": "Disables the What's New window, which highlights new features and enhancements for the desktop app version currently installed.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnableCaptureObjByPicker": {
+            "title": "Allows the MacOS System Picker to capture screen and audio content",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableMultipleAccountsSwitch": {
+            "title": "Disable the ability for users to be signed-in to multiple accounts and easily switch between them. If disabled, users must manually sign out and then sign in to another account.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnableCloudSwitch": {
+            "title": "Enable the option to switch between Zoom commercial (default) and Zoom for Gov.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
         "NoGoogle": {
             "title": "Disable Sign in with Google",
             "anyOf": [
@@ -1478,6 +1530,19 @@
                         2,
                         3
                     ]
+                }
+            ]
+        },
+        "EnableDiagnostic": {
+            "title": "Controls the ability for the desktop app to access the Network Connectivity Tool, which allows a user to test their network connection with Zoom services.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
                 }
             ]
         }
