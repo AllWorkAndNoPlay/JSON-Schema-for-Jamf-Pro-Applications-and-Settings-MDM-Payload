@@ -53,6 +53,7 @@
         },
         "zSSOHost": {
             "title": "Preconfigured SSO URL",
+            "description": "Set the default SSO URL for SSO login. For example, hooli.zoom.us would be set as hooli .",
             "anyOf": [
                 {
                     "type": "null",
@@ -63,7 +64,7 @@
                     "type": "string",
                     "options": {
                         "inputAttributes": {
-                            "placeholder": "company.zoom.us"
+                            "placeholder": "hooli"
                         }
                     }
                 }
@@ -71,6 +72,7 @@
         },
         "ForceSSOURL": {
             "title": "Lock SSO URL",
+            "description": "Set and lock the default SSO URL for SSO login. For example, hooli.zoom.us would be set as hooli .",
             "anyOf": [
                 {
                     "type": "null",
@@ -78,7 +80,12 @@
                 },
                 {
                     "title": "Configured",
-                    "type": "boolean"
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "hooli"
+                        }
+                    }
                 }
             ]
         },
