@@ -12,6 +12,32 @@
         "remove_empty_properties": true
     },
     "properties": {
+		"DisableDaemonInstall": {
+            "title": "Controls the use of the daemon helper to install updates, which bypasses the need to enter admin credentials when upgrading. This option requires AutoUpdate option to be enabled, and will fail if not enabled.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableZoomOnboarding": {
+            "title": "Disables the onboarding experience displayed the first time the Zoom desktop app is installed. False = Allow onboarding experience. True =  Disable onboarding experience.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
         "ZAutoSSOLogin": {
             "title": "Default to Login with SSO",
             "anyOf": [
@@ -137,6 +163,19 @@
         },
         "NoFacebook": {
             "title": "Disable Sign in with Facebook",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableLoginWithMicrosoft": {
+            "title": "Disable login with Microsoft.",
             "anyOf": [
                 {
                     "type": "null",
