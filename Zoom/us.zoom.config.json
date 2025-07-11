@@ -4,8 +4,8 @@
     "__preferencedomain": "us.zoom.config",
     "links": [
         {
-            "rel": "Documentation Link",
-            "href": "https://support.zoom.us/hc/en-us/articles/115001799006"
+            "rel": "Zoom - Mass-deploying with preconfigured settings for macOS - Documentation Link",
+            "href": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0064957"
         }
     ],
     "options": {
@@ -161,7 +161,8 @@
             ]
         },
         "NoGoogle": {
-            "title": "Disable Sign in with Google",
+            "title": "NoGoogle",
+            "description": "Remove Google login option.",
             "anyOf": [
                 {
                     "type": "null",
@@ -174,7 +175,8 @@
             ]
         },
         "NoFacebook": {
-            "title": "Disable Sign in with Facebook",
+        	"title": "NoFacebook",
+            "description": "Disable Sign in with Facebook",
             "anyOf": [
                 {
                     "type": "null",
@@ -187,7 +189,8 @@
             ]
         },
         "DisableLoginWithMicrosoft": {
-            "title": "Disable login with Microsoft.",
+            "title": "DisableLoginWithMicrosoft",
+            "description": "Disable login with Microsoft.",
             "anyOf": [
                 {
                     "type": "null",
@@ -200,7 +203,8 @@
             ]
         },
         "EnableAppleLogin": {
-            "title": "Allow access to Apple login option.",
+            "title": "EnableAppleLogin",
+            "description": "Allow access to Apple login option.",
             "anyOf": [
                 {
                     "type": "null",
