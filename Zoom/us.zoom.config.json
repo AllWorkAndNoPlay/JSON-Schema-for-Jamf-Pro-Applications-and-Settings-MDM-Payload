@@ -13,7 +13,8 @@
     },
     "properties": {
 		"DisableDaemonInstall": {
-            "title": "Controls the use of the daemon helper to install updates, which bypasses the need to enter admin credentials when upgrading. This option requires AutoUpdate option to be enabled, and will fail if not enabled.",
+            "title": "DisableDaemonInstall",
+            "description": "Controls the use of the daemon helper to install updates, which bypasses the need to enter admin credentials when upgrading. This option requires AutoUpdate option to be enabled, and will fail if not enabled.",
             "anyOf": [
                 {
                     "type": "null",
@@ -26,7 +27,8 @@
             ]
         },
 		"DisableZoomOnboarding": {
-            "title": "Disables the onboarding experience displayed the first time the Zoom desktop app is installed. False = Allow onboarding experience. True =  Disable onboarding experience.",
+			"title": "DisableZoomOnboarding",
+            "description": "Disables the onboarding experience displayed the first time the Zoom desktop app is installed. False = Allow onboarding experience. True =  Disable onboarding experience.",
             "anyOf": [
                 {
                     "type": "null",
@@ -39,7 +41,7 @@
             ]
         },
         "ZAutoSSOLogin": {
-            "title": "Default to Login with SSO",
+            "title": "ZAutoSSOLogin - Default to Login with SSO",
             "anyOf": [
                 {
                     "type": "null",
@@ -52,7 +54,7 @@
             ]
         },
         "zSSOHost": {
-            "title": "Preconfigured SSO URL",
+            "title": "zSSOHost - Preconfigured SSO URL",
             "description": "Set the default SSO URL for SSO login. For example, hooli.zoom.us would be set as hooli .",
             "anyOf": [
                 {
@@ -71,7 +73,7 @@
             ]
         },
         "ForceSSOURL": {
-            "title": "Lock SSO URL",
+            "title": "ForceSSOURL - Lock SSO URL to string",
             "description": "Set and lock the default SSO URL for SSO login. For example, hooli.zoom.us would be set as hooli .",
             "anyOf": [
                 {
@@ -90,7 +92,7 @@
             ]
         },
         "DisableAutoLaunchSSO": {
-            "title": "Do not launch previously used SSO URL",
+            "title": "DisableAutoLaunchSSO - Do not launch previously used SSO URL",
             "description": "(DisableAutoLaunchSSO)-Prevent Zoom from automatically launching the previously used SSO URL. This is useful for users with multiple accounts, each having their own SSO URL",
             "anyOf": [
                 {
@@ -104,7 +106,8 @@
             ]
         },
         "DisableDiscoverWhatsNew": {
-            "title": "Disables the What's New window, which highlights new features and enhancements for the desktop app version currently installed.",
+        	"title": "DisableDiscoverWhatsNew - do not show what's new",
+            "description": "Disables the What's New window, which highlights new features and enhancements for the desktop app version currently installed.",
             "anyOf": [
                 {
                     "type": "null",
@@ -117,7 +120,8 @@
             ]
         },
         "EnableCaptureObjByPicker": {
-            "title": "Allows the MacOS System Picker to capture screen and audio content",
+            "title": "EnableCaptureObjByPicker",
+            "description": "Allows the MacOS System Picker to capture screen and audio content",
             "anyOf": [
                 {
                     "type": "null",
@@ -130,7 +134,8 @@
             ]
         },
         "DisableMultipleAccountsSwitch": {
-            "title": "Disable the ability for users to be signed-in to multiple accounts and easily switch between them. If disabled, users must manually sign out and then sign in to another account.",
+        	"title": "DisableMultipleAccountsSwitch",
+            "description": "Disable the ability for users to be signed-in to multiple accounts and easily switch between them. If disabled, users must manually sign out and then sign in to another account.",
             "anyOf": [
                 {
                     "type": "null",
