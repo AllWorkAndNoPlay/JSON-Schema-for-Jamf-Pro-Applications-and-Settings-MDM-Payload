@@ -711,7 +711,7 @@
                 }
             ]
         },
-		"SetDevicePolicyToken, device_token": { 
+		"SetDevicePolicyToken": { 
 			"title": "SetDevicePolicyToken, device_token",
             "description": "Require internal meeting authentication.  - Please have an account admin or owner contact Zoom Support to have this enabled for use. The owner will also need to edit a role to have view/edit access to Device Policy Management. The required token can then be retrieved from the Device Policy Management page.",
             "anyOf": [
