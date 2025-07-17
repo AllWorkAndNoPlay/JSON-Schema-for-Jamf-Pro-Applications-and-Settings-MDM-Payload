@@ -1400,7 +1400,7 @@
                     ]
 				}
 			]
-		}.
+		},
 		"SetUseSystemDefaultSpeakerForVOIP": { 
 			"title": "SetUseSystemDefaultSpeakerForVOIP",
             "description": "Use the default system microphone.",
@@ -2727,7 +2727,7 @@
         },
 		"EnableGuestMesh": { 
 			"title": "EnableGuestMesh",
-            "description": "When utilizing Zoom Mesh, this policy allows users to join an external Webinar as a guest through another account"s local Zoom Mesh-enabled network. Other requirements must be met, such as the device having the minimum supported client version for Mesh connections and the external account"s associated account setting in the web portal also enabled.",
+            "description": "When utilizing Zoom Mesh, this policy allows users to join an external Webinar as a guest through another account's local Zoom Mesh-enabled network. Other requirements must be met, such as the device having the minimum supported client version for Mesh connections and the external account"s associated account setting in the web portal also enabled.",
 			"anyOf": [
                 {
                     "type": "null",
@@ -2738,6 +2738,6 @@
                     "type": "boolean"
                 }
             ]
-        },
+        }
     }
 }
