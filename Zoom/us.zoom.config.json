@@ -27,7 +27,7 @@
             ]
     	},
 		"SetEnrollToken4CloudMDM": { 
-			"title": "SetEnrollToken4CloudMDM, token",
+			"title": "SetEnrollToken4CloudMDM",
             "description": "Enroll your device into Zoom Device Management with a token provided from the web portal.",
             "anyOf": [
                 {
@@ -603,7 +603,7 @@
                 }
             ]
         },
-		"Account, your account ID": { 
+		"Account": { 
 			"title": "Account, your account ID",
             "description": "Restrict the client to only join meetings hosted by the specified account IDs.  - Please have an account admin or owner contact Zoom Support to acquire your account ID.",
             "anyOf": [
