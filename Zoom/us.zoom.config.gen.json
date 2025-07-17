@@ -1,0 +1,2743 @@
+{
+    "title": "us.zoom.config",
+    "__version": "1.0",
+    "__preferencedomain": "us.zoom.config",
+    "links": [
+        {
+            "rel": "Zoom - Mass-deploying with preconfigured settings for macOS - Documentation Link. Requirements for using the zoom IT admin installer",
+            "href": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0064957"
+        }
+    ],
+    "options": {
+        "remove_empty_properties": true
+    },
+    "properties": {
+		"DisableDaemonInstall": { 
+			"title": "DisableDaemonInstall",
+			"description": "Controls the use of the daemon helper to install updates, which bypasses the need to enter admin credentials when upgrading. This option requires AutoUpdate option to be enabled, and will fail if not enabled.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+    	},
+		"SetEnrollToken4CloudMDM, token": { 
+			"title": "SetEnrollToken4CloudMDM, token",
+            "description": "Enroll your device into Zoom Device Management with a token provided from the web portal.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "token"
+                        }
+                    }
+                }
+            ]
+        },
+		"DisableZoomOnboarding": { 
+			"title": "DisableZoomOnboarding",
+            "description": "Disables the onboarding experience displayed the first time the Zoom desktop app is installed. (0) - Allow onboarding experience. (1) - Disable onboarding experience.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableDiscoverWhatsNew": { 
+			"title": "DisableDiscoverWhatsNew",
+            "description": "Disables the What's New window, which highlights new features and enhancements for the desktop app version currently installed.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableCaptureObjByPicker": { 
+			"title": "EnableCaptureObjByPicker",
+            "description": "Allows the MacOS System Picker to capture screen and audio content",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableDiagnostic": { 
+			"title": "EnableDiagnostic",
+            "description": "Controls the ability for the desktop app to access the Network Connectivity Tool, which allows a user to test their network connection with Zoom services.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"BlockUntrustedSSLCert": { 
+			"title": "BlockUntrustedSSLCert",
+            "description": "Block connections to untrusted SSL certificates.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableCertPin": { 
+			"title": "DisableCertPin",
+            "description": "Disable Certificate Pinning.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"ProxyPAC, your_pac_url": { 
+			"title": "ProxyPAC, your_pac_url",
+            "description": "Set proxy server for desktop app with PAC URL.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "https://zoom.us/proxy.pac"
+                        }
+                    }
+                }
+            ]
+        },
+		"ProxyServer, proxy_address": { 
+			"title": "ProxyServer, proxy_address",
+            "description": "Set a proxy server for desktop app as named proxy. Example: server: port",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "zoom.us:2000"
+                        }
+                    }
+                }
+            ]
+        },
+		"ProxyBypass, bypass_rule": { 
+			"title": "ProxyBypass, bypass_rule",
+            "description": "Set proxy bypass rule for the desktop app.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "bypass rule"
+                        }
+                    }
+                }
+            ]
+        },
+		"DisableAudioOverProxy": { 
+			"title": "DisableAudioOverProxy",
+            "description": "Prevent audio traffic over proxies.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableVideoOverProxy": { 
+			"title": "DisableVideoOverProxy",
+            "description": "Prevent video traffic over proxies.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableSharingOverProxy": { 
+			"title": "DisableSharingOverProxy",
+            "description": "Prevent screen sharing traffic over proxies.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"BandwidthLimitUp": { 
+			"title": "BandwidthLimitUp",
+            "description": "Set maximum sending bandwidth for the desktop app. Note: If bandwidth is restricted through web settings, the web restrictions override restrictions set in the client.  (all values in Kbps)",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "3000"
+                        }
+                    }
+                }
+            ]
+        },
+		"BandwidthLimitDown": { 
+			"title": "BandwidthLimitDown",
+            "description": "Set maximum receiving bandwidth for the desktop app.Note: If bandwidth is restricted through web settings, the web restrictions override restrictions set in the client. (all values in Kbps)",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "3000"
+                        }
+                    }
+                }
+            ]
+        },
+		"IgnoreBandwidthLimits": { 
+			"title": "IgnoreBandwidthLimits",
+            "description": "Ignore bandwidth limit set on web settings. (Useful for exceptions to bandwidth restrictions)",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableIndependentDataPort": { 
+			"title": "EnableIndependentDataPort",
+            "description": "If enabled, the client will use the following ports for media transmission: Audio: 8803 Screen share: 8802 Video: 8801",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableDirectConnection2Web": { 
+			"title": "DisableDirectConnection2Web",
+            "description": "Disable all direct connections to Zoom web service.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableP2PStunTraffic": { 
+			"title": "DisableP2PStunTraffic",
+            "description": "Disable P2P STUN traffic from the Zoom app. This traffic is the Zoom app checking if admin web settings allow for P2P meetings on the network.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableMultipleAccountsSwitch": { 
+			"title": "DisableMultipleAccountsSwitch",
+            "description": "Disable the ability for users to be signed-in to multiple accounts and easily switch between them. If disabled, users must manually sign out and then sign in to another account.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"NoFacebook": { 
+			"title": "NoFacebook",
+            "description": "Remove Facebook login option.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"NoGoogle": { 
+			"title": "NoGoogle",
+            "description": "Remove Google login option.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableAppleLogin": { 
+			"title": "EnableAppleLogin",
+            "description": "Allow access to Apple login option.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"NoSSO": { 
+			"title": "NoSSO",
+            "description": "Remove SSO login option.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableLoginWithEmail": { 
+			"title": "DisableLoginWithEmail",
+            "description": "Remove Email login option.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableUserSignUp": { 
+			"title": "DisableUserSignUp",
+            "description": "Disable the Sign Up option on the Zoom app, which would otherwise be displayed with Join a Meeting and Sign In options upon opening the Zoom app.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableKeepSignedInWithSSO": { 
+			"title": "DisableKeepSignedInWithSSO",
+            "description": "Require fresh SSO login upon client start.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableKeepSignedInWithGoogle": { 
+			"title": "DisableKeepSignedInWithGoogle",
+            "description": "Require fresh Google login upon client start.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableKeepSignedInWithFacebook": { 
+			"title": "DisableKeepSignedInWithFacebook",
+            "description": "Require fresh Facebook login upon client start.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"KeepSignedIn": { 
+			"title": "KeepSignedIn",
+            "description": "Keep the user signed in to the client when relaunched. (Email login only)",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zAutoSSOLogin": { 
+			"title": "zAutoSSOLogin",
+            "description": "Defaults login to SSO.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zSSOHost": { 
+			"title": "zSSOHost",
+            "description": "Set the default SSO URL for SSO login. For example, hooli.zoom.us would be set as ""zSSOHost=hooli"".",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "hooli"
+                        }
+                    }
+                }
+            ]
+        },
+		"ForceSSOURL": { 
+			"title": "ForceSSOURL",
+            "description": "Set and lock the default SSO URL for SSO login. For example, hooli.zoom.us would be set as ""ForceSSOUrl=hooli"".",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "hooli"
+                        }
+                    }
+                }
+            ]
+        },
+		"EnableEmbedBrowserForSSO": { 
+			"title": "EnableEmbedBrowserForSSO",
+            "description": "Use embedded browser in the client for SSO.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"SetWebDomain": { 
+			"title": "SetWebDomain",
+            "description": "Sets the web domain for logging in or joining a meeting. By default, the value is https://zoom.us or https://zoom.com.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "https://zoom.us"
+                        }
+                    }
+                }
+            ]
+        },
+		"DisableAutoLaunchSSO": { 
+			"title": "DisableAutoLaunchSSO",
+            "description": "Prevent Zoom from automatically launching the previously used SSO URL. This is useful for users with multiple accounts, each having their own SSO URL.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnablePhoneLogin": { 
+			"title": "EnablePhoneLogin",
+            "description": "Enables login with phone authentication.  - This options is  only available for devices in the China region.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableLoginWithMicrosoft": { 
+			"title": "DisableLoginWithMicrosoft",
+            "description": "Disable login with Microsoft.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Account, your account ID": { 
+			"title": "Account, your account ID",
+            "description": "Restrict the client to only join meetings hosted by the specified account IDs.  - Please have an account admin or owner contact Zoom Support to acquire your account ID.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "1000000000"
+                        }
+                    }
+                }
+            ]
+        },
+		"Login_Domain": { 
+			"title": "Login_Domain",
+            "description": "Set the email address domain that users can login with, each separated by ""&"". Example: zoom.us & hooli.com Note: The ""&"" must be entered as an escape character ""&amp;"", or use CDATA to wrap the entire string. This only applies to plist mass deployment.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "zoom.us &amp; hooli.com"
+                        }
+                    }
+                }
+            ]
+        },
+		"EnableCloudSwitch": { 
+			"title": "EnableCloudSwitch",
+            "description": "Enable the option to switch between Zoom commercial (default) and Zoom for Gov.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnforceSignInToJoin": { 
+			"title": "EnforceSignInToJoin",
+            "description": "Require users to be authenticated before joining a meeting with the desktop app. Authentication can take place through the the web portal, if joining through join URL. Note: This policy will interfere with joining meetings and webinars hosted by Zoom for Government (ZfG) accounts, unless the OverrideEnforceSigninIntercloud policy is enabled as well.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnforceAppSignInToJoin": { 
+			"title": "EnforceAppSignInToJoin",
+            "description": "Require authentication on the desktop app to join any meeting on the desktop app. Note: This policy will interfere with joining meetings and webinars hosted by Zoom for Government (ZfG) accounts, unless the OverrideEnforceSigninIntercloud policy is enabled as well.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnforceSignInToJoinForWebinar": { 
+			"title": "EnforceSignInToJoinForWebinar",
+            "description": "Require users to be authenticated before joining a webinar with the desktop app. Authentication can take place through the the web portal, if joining through join URL. Note: This policy will interfere with joining webinars hosted by Zoom for Government (ZfG) accounts, unless the OverrideEnforceSigninIntercloud policy is enabled as well.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnforceAppSignInToJoinForWebinar": { 
+			"title": "EnforceAppSignInToJoinForWebinar",
+            "description": "Require authentication on the desktop app to join any webinar on the desktop app. Note: This policy will interfere with joining webinars hosted by Zoom for Government (ZfG) accounts, unless the OverrideEnforceSigninIntercloud policy is enabled as well.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"SetDevicePolicyToken, device_token": { 
+			"title": "SetDevicePolicyToken, device_token",
+            "description": "Require internal meeting authentication.  - Please have an account admin or owner contact Zoom Support to have this enabled for use. The owner will also need to edit a role to have view/edit access to Device Policy Management. The required token can then be retrieved from the Device Policy Management page.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "device_token"
+                        }
+                    }
+                }
+            ]
+        },
+		"EnableNewSigninUI": { 
+			"title": "EnableNewSigninUI",
+            "description": "When a signed-out user opens the Zoom Workplace app, they will see the enhanced workplace interface with tabs that reflect Zoom products. Upon signing in, users will only see the products available to them.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zDualMonitorOn": { 
+			"title": "zDualMonitorOn",
+            "description": "Enable dual monitor mode.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"FullScreenWhenJoin": { 
+			"title": "FullScreenWhenJoin",
+            "description": "When starting or joining a meeting, the meeting window will enter full-screen.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"AutoHideToolBar": { 
+			"title": "AutoHideToolBar",
+            "description": "Set use of Always show meeting controls setting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableAutoCopyConfInvitationURL": { 
+			"title": "EnableAutoCopyConfInvitationURL",
+            "description": "Enables the Copy invite link when starting a meeting option found within General app settings.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DefaultUsePortraitView": { 
+			"title": "DefaultUsePortraitView",
+            "description": "Default to Portrait Mode upon opening Zoom.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableClosedCaptioning": { 
+			"title": "DisableClosedCaptioning",
+            "description": "Disable the use of all captioning.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableManualClosedCaptioning": { 
+			"title": "DisableManualClosedCaptioning",
+            "description": "Disable the use of manual and third-party captioning. This does not affect automated captioning.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableAssignTypist": { 
+			"title": "DisableAssignTypist",
+            "description": "Disable the ability for users to assign a participant the role of manually entering captions. This does not affect the use of automated captions or captions provided by a third-party service.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableQnA": { 
+			"title": "DisableQnA",
+            "description": "Disable the use of Q&A in webinars.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableMeetingReactions": { 
+			"title": "DisableMeetingReactions",
+            "description": "Disable the use of Meeting reactions.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableNonVerbalFeedback": { 
+			"title": "DisableNonVerbalFeedback",
+            "description": "Disable the use of Non-verbal feedback.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableWebinarReactions": { 
+			"title": "DisableWebinarReactions",
+            "description": "Disable the use of Webinar Reactions.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableSideCar": { 
+			"title": "DisableSideCar",
+            "description": "Disable the use of Webinar Resources, which allows webinar hosts with the ability to link to external resources, such as newsletter sign-ups, learn more pages, and others.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableBroadcastBOMessage": { 
+			"title": "DisableBroadcastBOMessage",
+            "description": "Disable the ability for the host to broadcast a message to all open breakout rooms.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"ConfirmWhenLeave": { 
+			"title": "ConfirmWhenLeave",
+            "description": "Confirm before leaving a meeting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"ShowConnectedTime": { 
+			"title": "ShowConnectedTime",
+            "description": "Enable the Show Meeting Timers setting. This setting allows for viewing the current duration of the meeting, or the remaining time, based on scheduled duration.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"MuteWhenLockScreen": { 
+			"title": "MuteWhenLockScreen",
+            "description": "Automatically mute the microphone and turn off video, when the screen is locked during a meeting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableRemindMeetingTime": { 
+			"title": "EnableRemindMeetingTime",
+            "description": "Display reminder notifications for upcoming meetings.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableInMeetingZoomNotes": { 
+			"title": "DisableInMeetingZoomNotes",
+            "description": "Disables the use of Zoom Notes during meetings.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableNewSetting": { 
+			"title": "DisableNewSetting",
+            "description": "Disable the new setting UI.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"KeepMeetingOnTop": { 
+			"title": "KeepMeetingOnTop",
+            "description": "Keep meeting on top of other apps.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"AU2_Update3rdStorageUrl": { 
+			"title": "AU2_Update3rdStorageUrl",
+            "description": "Set a local storage url for update. This policy depends on AU2_DeploySpecificVersion, if AU2_DeploySpecificVersion is empty, AU2_Update3rdStorageUrl will not work. If installation package can be downloaded through such a link: ""http://127.0.0.1/x64_ZoomInstallerFull.msi"", this string should be ""http://127.0.0.1"".",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "http://127.0.0.1"
+                        }
+                    }
+                }
+            ]
+        },
+		"DisableLocalASR": { 
+			"title": "DisableLocalASR",
+            "description": "Disable local ASR feature.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableSmartMeetingSummaries": { 
+			"title": "DisableSmartMeetingSummaries",
+            "description": "Disable the in-meeting toolbar option for Meeting Summary. If disabled, users will not be able see or interact with the AI Companion feature, but their audio will still be transcribed and available for questions by others.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableAICQueries": { 
+			"title": "DisableAICQueries",
+            "description": "Disable the in-meeting toolbar option for AI Companion. If disabled, users will not be able see or interact with the AI Companion feature, but their audio will still be transcribed and available for questions by others.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zDisableRecvVideo": { 
+			"title": "zDisableRecvVideo",
+            "description": "Disable receiving video.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zDisableSendVideo": { 
+			"title": "zDisableSendVideo",
+            "description": "Disable sending video.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zDisableVideo": { 
+			"title": "zDisableVideo",
+            "description": "Automatically turn off camera when joining a meeting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zUse720PByDefault": { 
+			"title": "zUse720PByDefault",
+            "description": "Use HD video in meetings.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableMirrorEffect": { 
+			"title": "EnableMirrorEffect",
+            "description": "Enable mirroring of your video. Mirror effect only affects your view of your video.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"HideSelfView": { 
+			"title": "HideSelfView",
+            "description": "Controls the use of the Hide Self View option.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableFaceBeauty": { 
+			"title": "EnableFaceBeauty",
+            "description": "Enable Touch up my appearance.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"SetFaceBeautyValue": { 
+			"title": "SetFaceBeautyValue",
+            "description": "Used in conjunction with EnableFaceBeauty, this allows you to set the exact intensity of the Touch up my appearance filter.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "25"
+                        }
+                    }
+                }
+            ]
+        },
+		"EnableLightAdaption": { 
+			"title": "EnableLightAdaption",
+            "description": "Enable Adjust for low-light video setting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableAutoLightAdaption": { 
+			"title": "EnableAutoLightAdaption",
+            "description": "Set mode of adjusting low-light video feature. This is dependent on the EnableLightAdaption option: 1 - Auto, 0 - Manual",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": [
+                            "1 - Auto",
+                            "0 - Manual"
+                        ]
+                    },
+                    "enum": [
+                        0,
+                        1
+                    ]
+                }
+            ]
+        },
+		"SetLightAdaptionManualValue": { 
+			"title": "SetLightAdaptionManualValue",
+            "description": "Used in conjunction with EnableLightAdaption, this allows you to set the exact intensity of the low-light adjustment.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "20"
+                        }
+                    }
+                }
+            ]
+        },
+		"AlwaysShowVideoPreviewDialog": { 
+			"title": "AlwaysShowVideoPreviewDialog",
+            "description": "Always show the video preview when joining a meeting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zHideNoVideoUser": { 
+			"title": "zHideNoVideoUser",
+            "description": "Hide non-video participants by default.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableSpotlightSelf": { 
+			"title": "EnableSpotlightSelf",
+            "description": "Show self as the active speaker when speaking.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Enable49Video": { 
+			"title": "Enable49Video",
+            "description": "Set max number of participants displayed in Gallery View to 49 participants per screen.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"VideoRenderMethod": { 
+			"title": "VideoRenderMethod",
+            "description": "Set the video rendering method: 0 - Auto 1 - Direct3D11 Flip Mode 2 - Direct3D11 3 - Direct3D9 4 - GDI",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": [
+                            "0 - Auto",
+                            "1 - Direct3D11 Flip Mode 2",
+                            "2 - Direct3D11",
+                            "3 - Direct3D9",
+                            "4 - GDI"
+                        ]
+                    },
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4
+                    ]
+                }
+            ]
+        },
+		"DisableComputerAudio": { 
+			"title": "DisableComputerAudio",
+            "description": "Disable and remove the Computer Audio from the meeting audio options.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"ZCCMsgAudioSetting": { 
+			"title": "ZCCMsgAudioSetting",
+            "description": "Setting up message notifications for Zoom Contact Center",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": [
+                            "0 - No effect",
+                            "1 - Always play notifications.",
+                            "2 - Mute during meetings and calls.",
+                            "3 - Always mute notifications.",
+                        ]
+                    },
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ]
+				}
+			]
+		}.
+		"SetUseSystemDefaultSpeakerForVOIP": { 
+			"title": "SetUseSystemDefaultSpeakerForVOIP",
+            "description": "Use the default system microphone.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"SetUseSystemDefaultMicForVOIP": { 
+			"title": "SetUseSystemDefaultMicForVOIP",
+            "description": "Use the default system speakers.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"AudioAutoAdjust": { 
+			"title": "AudioAutoAdjust",
+            "description": "Enable Automatically adjust microphone volume audio setting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"SetSuppressBackgroundNoiseLevel": { 
+			"title": "SetSuppressBackgroundNoiseLevel",
+            "description": "Disables the What's New window, which highlights new features and enhancements for the desktop app version currently installed: 0 - Auto, 1- Low, 2 - Medium, 3 - High",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": [
+                            "0 - Auto",
+                            "1 - Low",
+                            "2 - Medium",
+                            "3 - High"
+                        ]
+                    },
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+		},
+		"EnableOriginalSound": { 
+			"title": "EnableOriginalSound",
+            "description": "Enable the Original sound for musicians audio profile for the meeting audio input.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zAutoJoinVoip": { 
+			"title": "zAutoJoinVoip",
+            "description": "Automatically connect audio with computer audio when joining a meeting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"MuteVoipWhenJoin": { 
+			"title": "MuteVoipWhenJoin",
+            "description": "Mute computer audio microphone when joining a meeting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableHIDControl": { 
+			"title": "EnableHIDControl",
+            "description": "Enables control of USB devices by the Zoom client. This correlates to the Sync buttons on headset option within app Audio settings.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableScreenShare": { 
+			"title": "DisableScreenShare",
+            "description": "Disable the ability to share your screen in meetings and webinars. Note: This does not disable incoming screen sharing from other participants.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zAutoFullScreenWhenViewShare": { 
+			"title": "zAutoFullScreenWhenViewShare",
+            "description": "When viewing shared content, the content window automatically goes fullscreen.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zAutoFitWhenViewShare": { 
+			"title": "zAutoFitWhenViewShare",
+            "description": "When viewing shared content, the content window automatically adjusts to fit the viewer's screen.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zDisableAnnotation": { 
+			"title": "zDisableAnnotation",
+            "description": "Disable and remove the ability to annotate over shared screen.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableShareAudio": { 
+			"title": "EnableShareAudio",
+            "description": "Enable the Share computer audio option when sharing.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableShareVideo": { 
+			"title": "EnableShareVideo",
+            "description": "Enable the Optimize for video clip option when sharing.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableWhiteBoard": { 
+			"title": "DisableWhiteBoard",
+            "description": "Disable Classic Whiteboard feature.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableInMeetingWhiteBoard": { 
+			"title": "DisableInMeetingWhiteBoard",
+            "description": "Disable the Zoom Whiteboard feature in meetings and webinars.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableSlideControl": { 
+			"title": "DisableSlideControl",
+            "description": "Disable Slide Control feature.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableDesktopShare": { 
+			"title": "DisableDesktopShare",
+            "description": "Disable the option to share your desktop when screen sharing.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableRemoteControl": { 
+			"title": "DisableRemoteControl",
+            "description": "Disable Remote Control feature.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableRemoteSupport": { 
+			"title": "DisableRemoteSupport",
+            "description": "Disable Remote Support feature.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zRemoteControllAllApp": { 
+			"title": "zRemoteControllAllApp",
+            "description": "Allow remote control of all applications.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableShareClipboardWhenRemoteControl": { 
+			"title": "EnableShareClipboardWhenRemoteControl",
+            "description": "Allow clipboard access during remote control.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"PresentInMeetingOption": { 
+			"title": "PresentInMeetingOption",
+            "description": "Set sharing option when sharing your screen within a meeting: 0 - Show all sharing options, 1 - Automatically share desktop",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": [
+                            "0 - Show all sharing options ",
+                            "1 - Automatically share desktop"
+                        ]
+                    },
+                    "enum": [
+                        0,
+                        1
+                    ]
+                }
+            ]
+        },
+		"EnableDoNotDisturbInSharing": { 
+			"title": "EnableDoNotDisturbInSharing",
+            "description": "Silence system notifications when sharing desktop.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"LegacyCaptureMode": { 
+			"title": "LegacyCaptureMode",
+            "description": "Disable Hardware Acceleration for Screen Sharing under Share Screen > Advanced.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"SetScreenCaptureMode": { 
+			"title": "SetScreenCaptureMode",
+            "description": "Set the screen capture mode: 0 - Auto, 1 - Legacy operating systems, 2 - Capture with window filtering, 3 - Advanced share with window filtering, 4 - Advanced share without window filtering, 5 - Secure share with window filtering",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": [
+                            "0 - Auto",
+                            "1 - Legacy operating systems",
+                            "2 - Capture with window filtering",
+                            "3 - Advanced share with window filtering",
+                            "4 - Advanced share without window filtering",
+                            "5 - Secure share with window filtering"
+                        ]
+                    },
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                }
+            ]
+        },
+		"EnableHardwareOptimizeVideoSharing": { 
+			"title": "EnableHardwareOptimizeVideoSharing",
+            "description": "Enable Hardware Acceleration for Video Sharing under Share Screen > Advanced.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"HidePhoneInComingCallWhileInMeeting": { 
+			"title": "HidePhoneInComingCallWhileInMeeting",
+            "description": "Prevent incoming call notifications while in a meeting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableLaunchApp4IncomingCalls": { 
+			"title": "EnableLaunchApp4IncomingCalls",
+            "description": "Control the Launch an external app or a URL for incoming calls option in the client. This must be used in coordination with SetCommand4IncomingCalls, so that the URL can be configured as well.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"SetCommand4IncomingCalls": { 
+			"title": "SetCommand4IncomingCalls",
+            "description": "Set the URL used when the client receives an incoming call. This must be used in coordination with EnableLaunchApp4IncomingCalls.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "https://127.0.0.1"
+                        }
+                    }
+                }
+            ]
+        },
+		"ClickToCallDefault": { 
+			"title": "ClickToCallDefault",
+            "description": "Choose which Zoom service is used when clicking a phone number to place a call: 0 - Zoom Phone, 1 - Zoom Contact Center",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": [
+                            "0 - Zoom Phone",
+                            "1 - Zoom Contact Center"
+                        ]
+                    },
+                    "enum": [
+                        0,
+                        1
+                    ]
+                }
+            ]
+        },
+		"zDisableChat": { 
+			"title": "zDisableChat",
+            "description": "Disable in-meeting chat.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zDisableFT": { 
+			"title": "zDisableFT",
+            "description": "Disable in-meeting file transfer. (sending or receiving)",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableMeeting3rdPartyFileStorage": { 
+			"title": "DisableMeeting3rdPartyFileStorage",
+            "description": "Disable in-meeting 3rd party file transfer.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableZoomApps": { 
+			"title": "DisableZoomApps",
+            "description": "Hide the Zoom Apps button.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableZoomAppsGuestAccess": { 
+			"title": "DisableZoomAppsGuestAccess",
+            "description": "Control the ability for users to utilize a Zoom App in Guest mode.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableVirtualBkgnd": { 
+			"title": "DisableVirtualBkgnd",
+            "description": "Disable Virtual Background feature.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableVideoFilters": { 
+			"title": "DisableVideoFilters",
+            "description": "Disable Video filters feature.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableAutoReverseVirtualBkgnd": { 
+			"title": "EnableAutoReverseVirtualBkgnd",
+            "description": "Require post-meeting virtual background auto-reversal.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"RecordPath, your_recording_path": { 
+			"title": "RecordPath, your_recording_path",
+            "description": "Set the default recording location for local recordings.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "/Users/UserName/Documents/Zoom"
+                        }
+                    }
+                }
+            ]
+        },
+		"zDisableCMR": { 
+			"title": "zDisableCMR",
+            "description": "Disable recording to the cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"zDisableLocalRecord": { 
+			"title": "zDisableLocalRecord",
+            "description": "Disable recording locally on the device.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"NotifyCMRAvailable": { 
+			"title": "NotifyCMRAvailable",
+            "description": "Control the desktop app setting Show notifications when a new recording is available.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableDirectShare": { 
+			"title": "DisableDirectShare",
+            "description": "Disable direct share with Zoom Rooms option.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableStartMeetingWithRoomSystem": { 
+			"title": "EnableStartMeetingWithRoomSystem",
+            "description": "Display the Call Room System button on the home screen of the desktop app.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"PresentToRoomWithAudio": { 
+			"title": "PresentToRoomWithAudio",
+            "description": "Share sound when screen sharing to a Zoom Room.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"PresentToRoomOptimizeVideo": { 
+			"title": "PresentToRoomOptimizeVideo",
+            "description": "Optimize screen sharing for video clip when sharing to a Zoom Room.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"PresentToRoomOption": { 
+			"title": "PresentToRoomOption",
+            "description": "Set sharing option when sharing to a Zoom Room: 0 - Show all sharing options, 1 - Automatically share desktop",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": [
+                            "0 - Show all sharing options",
+                            "1 - Automatically share desktop"
+                        ]
+                    },
+                    "enum": [
+                        0,
+                        1
+                    ]
+                }
+            ]
+        },
+		"KeepOnlyOneSectionOpenInChat": { 
+			"title": "KeepOnlyOneSectionOpenInChat",
+            "description": "Controls the state of the Only allow one section opened at a time setting for the desktop app, found under the Team Chat section of app settings.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"SeparateIMChatAndChannel": { 
+			"title": "SeparateIMChatAndChannel",
+            "description": "Controls the state of the Organize by section setting for the desktop app, found under the Team Chat section of app settings.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableLinkPreviewInChat": { 
+			"title": "DisableLinkPreviewInChat",
+            "description": "Disable link previews.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"SetMessengerDoNotDropThread": { 
+			"title": "SetMessengerDoNotDropThread",
+            "description": "Move messages with new replies to the bottom of the chat/channel.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"MessageNotificationPreference": { 
+			"title": "MessageNotificationPreference",
+            "description": "Setting up message notifications preferences for Team Chat.: 0 - All messages, 1 - Direct messages, mentions, and replies, 2 - Off",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": [
+                            "0 - All messages",
+                            "1 - Direct messages, mentions, and replies",
+                            "2 - Off"
+                        ]
+                    },
+                    "enum": [
+                        0,
+                        1,
+                        2
+                    ]
+                }
+            ]
+        },
+		"ShowUnreadCountForChannel": { 
+			"title": "ShowUnreadCountForChannel",
+            "description": "Show unread message count for channels.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"ShowUnreadCountForMeetingChat": { 
+			"title": "ShowUnreadCountForMeetingChat",
+            "description": "Show unread message count for meeting chats.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"UnreadViewOrder": { 
+			"title": "UnreadViewOrder",
+            "description": "Where to start when viewing unread messages in a channel. 0 - Start at the first unread message 1 - Start at the latest unread message",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": [
+                            "0 - Start at the first unread message",
+                            "1 - Start at the latest unread message"
+                        ]
+                    },
+                    "enum": [
+                        0,
+                        1
+                    ]
+                }
+            ]
+        },
+        "eceiveNotificationsByKeyword": { 
+			"title": "ReceiveNotificationsByKeyword",
+            "description": "Setting keywords as the basis for triggering message notifications.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "keyword"
+                        }
+                    }
+                }
+            ]
+        },
+		"ShowProfilePhotosInChat": { 
+			"title": "ShowProfilePhotosInChat",
+            "description": "Controls if user profile pictures are shown in Zoom Chat.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"ShowVoiceMessageButton": { 
+			"title": "ShowVoiceMessageButton",
+            "description": "Allow use of the Send audio message option.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"ShowVideoMessageButton": { 
+			"title": "ShowVideoMessageButton",
+            "description": "Allow use of the Send video message option.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"PlaySoundForIMMessage": { 
+			"title": "PlaySoundForIMMessage",
+            "description": "Play audio notifications when an IM message is received.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"ShowIMMessagePreview": { 
+			"title": "ShowIMMessagePreview",
+            "description": "Allow message previews in system notifications when a chat message is received.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"MuteIMNotificationWhenInMeeting": { 
+			"title": "MuteIMNotificationWhenInMeeting",
+            "description": "Mute chat system notifications when in a meeting.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableIMFileTransfer": { 
+			"title": "DisableIMFileTransfer",
+            "description": "Restricts the ability of users to send files through Team Chat, except for any domains provided in the AllowedIMFileTransferDomain policy.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"AllowedIMFileTransferDomain": { 
+			"title": "AllowedIMFileTransferDomain",
+            "description": "Allows admins to specify domains that are allowed to send files through Team Chat when the DisableIMFileTransfer policy is enabled. Multiple domains can be separated by an &, for example: Domain1.com&Domain2.com Note: If the DisableIMFileTransfer policy is enabled and no domains are specified through this policy, file transfers through Team Chat are entirely disabled for all domains.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "Domain1.com&Domain2.com"
+                        }
+                    }
+                }
+            ]
+        },
+		"PreferredLanguage": { 
+			"title": "PreferredLanguage",
+            "description": "Preferred Language - Use this language when translating messages",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "english"
+                        }
+                    }
+                }
+            ]
+        },
+		"EmbedUserAgentString": { 
+			"title": "EmbedUserAgentString",
+            "description": "Embed a specified user agent string for all HTTP requests from Zoom client.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "user_agent_string"
+                        }
+                    }
+                }
+            ]
+        },
+		"EmbedDeviceTag": { 
+			"title": "EmbedDeviceTag",
+            "description": "Embed a specified device tag string for all HTTP requests from Zoom client application. This string will be appended to the head of the regular HTTP requests.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "device_tag_string"
+                        }
+                    }
+                }
+            ]
+        },
+		"OverrideEnforceSigninIntercloud": { 
+			"title": "OverrideEnforceSigninIntercloud",
+            "description": "Override the following policies to allow users to join a Zoom meeting or webinar hosted on the Zoom for Government Cloud (ZfG Cloud) without the need to authenticate: EnforceSignInToJoin EnforceAppSignInToJoin EnforceSignInToJoinForWebinar EnforceAppSignInToJoinForWebinar",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableAllFeatures": { 
+			"title": "Intercloud_DisableAllFeatures",
+            "description": "Disables all features except for audio and video for meetings hosted on the ZfG cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableMeetingChat": { 
+			"title": "Intercloud_DisableMeetingChat",
+            "description": "Disables the use of in-meeting chat on meetings hosted on the ZfG Cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableShareScreen": { 
+			"title": "Intercloud_DisableShareScreen",
+            "description": "Disables the local ability to share screen on meetings hosted on the ZfG Cloud.This does not affect others' ability to shared content.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableMeetingReactions": { 
+			"title": "Intercloud_DisableMeetingReactions",
+            "description": "Disables the use of meeting reactions on meetings hosted on the ZfG Cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableMeetingFileTransfer": { 
+			"title": "Intercloud_DisableMeetingFileTransfer",
+            "description": "Disables the use of file transfers through in-meeting chat on meetings hosted on the ZfG Cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableAnnotation": { 
+			"title": "Intercloud_DisableAnnotation",
+            "description": "Disables the local ability to annotate on shared content in meetings hosted on the ZfG Cloud. This does not affect others' ability to annotate.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableWhiteBoard": { 
+			"title": "Intercloud_DisableWhiteBoard",
+            "description": "Disables the use of in-meeting whiteboarding on meetings hosted on the ZfG Cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableLocalRecording": { 
+			"title": "Intercloud_DisableLocalRecording",
+            "description": "Disabled by default, this option disables the ability to locally record meetings hosted on the ZfG Cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableClosedCaptioning": { 
+			"title": "Intercloud_DisableClosedCaptioning",
+            "description": "Disabled by default, this option disables the use of captioning features on meetings hosted on the ZfG Cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableRemoteControl": { 
+			"title": "Intercloud_DisableRemoteControl",
+            "description": "Disabled by default, this option disables the remote control of shared screens in meetings hosted on the ZfG Cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableMeetingPolls": { 
+			"title": "Intercloud_DisableMeetingPolls",
+            "description": "Disabled by default, this option disables the use of polling in meetings hosted on the ZfG Cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"Intercloud_DisableComputerAudio": { 
+			"title": "Intercloud_DisableComputerAudio",
+            "description": "Disabled by default, this option disables the use of computer audio for connecting to meetings hosted on the ZfG Cloud.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"EnableMeshNetworking": { 
+			"title": "EnableMeshNetworking",
+            "description": "Control client use of Zoom Mesh, even if deployed on your account and local network.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"MeshMulticastIP": { 
+			"title": "MeshMulticastIP",
+            "description": "When utilizing Zoom Mesh, this policy allows admins to specify a valid IP address to be a UDP multicast IP for Zoom apps to declare themselves and detect each other in their local sub-network (255.255.255.0). Admins can choose other IP addresses within the range of [224.0.0.1, 239.255.255.255].",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "224.0.0.1"
+                        }
+                    }
+                }
+            ]
+        },
+		"MeshMulticastPort": { 
+			"title": "MeshMulticastPort",
+            "description": "When utilizing Zoom Mesh, this policy allows an admin to specify a valid port to be used as the UDP multicast port to communicate with other Zoom Mesh nodes on the network.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "Port 36699"
+                        }
+                    }
+                }
+            ]
+        },
+		"MeshListenPortRange": { 
+			"title": "MeshListenPortRange",
+            "description": "When utilizing Zoom Mesh, this policy allows a valid port range to be used to set up listen sockets for connection requests between Mesh parents and children nodes. The nodes will also use this range to send signals and media data.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "18801-19800"
+                        }
+                    }
+                }
+            ]
+        },
+		"EnableGuestMesh": { 
+			"title": "EnableGuestMesh",
+            "description": "When utilizing Zoom Mesh, this policy allows users to join an external Webinar as a guest through another account"s local Zoom Mesh-enabled network. Other requirements must be met, such as the device having the minimum supported client version for Mesh connections and the external account"s associated account setting in the web portal also enabled.",
+			"anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+    }
+}
