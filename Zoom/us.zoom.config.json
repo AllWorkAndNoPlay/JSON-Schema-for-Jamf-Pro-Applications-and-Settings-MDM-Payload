@@ -26,7 +26,7 @@
                 }
             ]
     	},
-		"SetEnrollToken4CloudMDM, token": { 
+		"SetEnrollToken4CloudMDM": { 
 			"title": "SetEnrollToken4CloudMDM, token",
             "description": "Enroll your device into Zoom Device Management with a token provided from the web portal.",
             "anyOf": [
@@ -148,7 +148,7 @@
                 }
             ]
         },
-		"ProxyServer, proxy_address": { 
+		"ProxyServer": { 
 			"title": "ProxyServer, proxy_address",
             "description": "Set a proxy server for desktop app as named proxy. Example: server: port",
             "anyOf": [
@@ -167,7 +167,7 @@
                 }
             ]
         },
-		"ProxyBypass, bypass_rule": { 
+		"ProxyBypass": { 
 			"title": "ProxyBypass, bypass_rule",
             "description": "Set proxy bypass rule for the desktop app.",
             "anyOf": [
@@ -2705,15 +2705,15 @@
                     }
                 }
             ]
-        },
+		},
 		"MeshListenPortRange": { 
-			"title": "MeshListenPortRange",
-            "description": "When utilizing Zoom Mesh, this policy allows a valid port range to be used to set up listen sockets for connection requests between Mesh parents and children nodes. The nodes will also use this range to send signals and media data.",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
+		"title": "MeshListenPortRange",
+			"description": "When utilizing Zoom Mesh, this policy allows a valid port range to be used to set up listen sockets for connection requests between Mesh parents and children nodes. The nodes will also use this range to send signals and media data.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
                 {
                     "title": "Configured",
                     "type": "string",
