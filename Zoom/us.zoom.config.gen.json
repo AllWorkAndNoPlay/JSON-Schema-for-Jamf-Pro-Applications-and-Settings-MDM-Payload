@@ -492,7 +492,7 @@
         },
 		"zSSOHost": { 
 			"title": "zSSOHost",
-            "description": "Set the default SSO URL for SSO login. For example, hooli.zoom.us would be set as ""zSSOHost=hooli"".",
+            "description": "Set the default SSO URL for SSO login. For example, hooli.zoom.us would be set as zSSOHost=hooli.",
             "anyOf": [
                 {
                     "type": "null",
@@ -511,7 +511,7 @@
         },
 		"ForceSSOURL": { 
 			"title": "ForceSSOURL",
-            "description": "Set and lock the default SSO URL for SSO login. For example, hooli.zoom.us would be set as ""ForceSSOUrl=hooli"".",
+            "description": "Set and lock the default SSO URL for SSO login. For example, hooli.zoom.us would be set as ForceSSOUrl=hooli.",
             "anyOf": [
                 {
                     "type": "null",
@@ -624,7 +624,7 @@
         },
 		"Login_Domain": { 
 			"title": "Login_Domain",
-            "description": "Set the email address domain that users can login with, each separated by ""&"". Example: zoom.us & hooli.com Note: The ""&"" must be entered as an escape character ""&amp;"", or use CDATA to wrap the entire string. This only applies to plist mass deployment.",
+            "description": "Set the email address domain that users can login with, each separated by &. Example: zoom.us & hooli.com Note: The & must be entered as an escape character &amp;, or use CDATA to wrap the entire string. This only applies to plist mass deployment.",
             "anyOf": [
                 {
                     "type": "null",
@@ -1040,7 +1040,7 @@
         },
 		"AU2_Update3rdStorageUrl": { 
 			"title": "AU2_Update3rdStorageUrl",
-            "description": "Set a local storage url for update. This policy depends on AU2_DeploySpecificVersion, if AU2_DeploySpecificVersion is empty, AU2_Update3rdStorageUrl will not work. If installation package can be downloaded through such a link: ""http://127.0.0.1/x64_ZoomInstallerFull.msi"", this string should be ""http://127.0.0.1"".",
+            "description": "Set a local storage url for update. This policy depends on AU2_DeploySpecificVersion, if AU2_DeploySpecificVersion is empty, AU2_Update3rdStorageUrl will not work. If installation package can be downloaded through such a link: http://127.0.0.1/x64_ZoomInstallerFull.msi, this string should be http://127.0.0.1.",
             "anyOf": [
                 {
                     "type": "null",
