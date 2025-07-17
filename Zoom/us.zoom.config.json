@@ -295,6 +295,20 @@
                 }
             ]
         },
+        "DisableUserSignUp": {
+            "title": "DisableUserSignUp",
+            "description": "Disable the Sign Up option on the Zoom app, which would otherwise be displayed with Join a Meeting and Sign In options upon opening the Zoom app.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
         "EnforceSignInToJoin": {
             "title": "Force Sign-in to Join Meeting",
             "description": "(EnforceSignInToJoin)-Forces users to be signed in before joining a meeting from the app. Users can be signed-in on the web portal when joining through join URL",
@@ -324,7 +338,8 @@
             ]
         },
         "SetWebDomain": {
-            "title": "Sign in Web Domain",
+            "title": "SetWebDomain",
+            "description": "Sets the web domain for logging in or joining a meeting. By default, the value is https://zoom.us or https://zoom.com."
             "anyOf": [
                 {
                     "type": "null",
@@ -570,6 +585,76 @@
         },
         "BlockUntrustedSSLCert": {
             "title": "Block Untrusted SSL Connections",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableCertPin": {
+            "title": "DisableCertPin",
+            "description":"Disable Certificate Pinning.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableAudioOverProxy": {
+            "title": "DisableAudioOverProxy",
+            "description":"Prevent audio traffic over proxies.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableVideoOverProxy": {
+            "title": "DisableVideoOverProxy",
+            "description":"Prevent video traffic over proxies.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+		"DisableSharingOverProxy": {
+            "title": "DisableSharingOverProxy",
+            "description":"Prevent screen sharing traffic over proxies.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableSharingOverProxy": {
+            "title": "DisableSharingOverProxy",
+            "description":"Prevent screen sharing traffic over proxies.",
             "anyOf": [
                 {
                     "type": "null",
@@ -1346,6 +1431,34 @@
                 }
             ]
         },
+		"DisableDirectConnection2Web": {
+            "title": "DisableDirectConnection2Web",
+            "description": "Disable all direct connections to Zoom web service.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableP2PStunTraffic": {
+            "title": "DisableP2PStunTraffic",
+            "description": "Disable P2P STUN traffic from the Zoom app. This traffic is the Zoom app checking if admin web settings allow for P2P meetings on the network.",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
         "EnableSSLVerification": {
             "title": "Enable SSL Verification",
             "anyOf": [
@@ -1401,24 +1514,6 @@
         },
         "BandwidthLimitUp": {
             "title": "Limit Maximum Upstream Bandwidth",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "string",
-                    "options": {
-                        "inputAttributes": {
-                            "placeholder": "5000"
-                        }
-                    }
-                }
-            ]
-        },
-        "BandwidthLimitDown": {
-            "title": "Limit Maximum Downstream Bandwidth",
             "anyOf": [
                 {
                     "type": "null",
