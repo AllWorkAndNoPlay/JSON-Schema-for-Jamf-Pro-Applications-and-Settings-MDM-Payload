@@ -2738,6 +2738,348 @@
                     "type": "boolean"
                 }
             ]
-        }
+        },
+        "TryPKRequestDirectFirst": {
+			"title": "TryPKRequestDirectFirst",
+			"description": "If this policy is enabled, and the PK request results in the proxy winning, it will not affect subsequent requests. However, if the PK request results in direct connection winning, all subsequent non-PK requests will use direct connections.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"ProxyPKRequestDelay": {
+			"title": "ProxyPKRequestDelay",
+			"description": "Default policy is 500. This policy depends on TryPKRequestDirectFirst being enabled. This policy sets the delay for proxy requests in PK requests to increase the likelihood of direct connections winning, and helps reduce the load on proxy servers.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "string",
+					"options": {
+						"inputAttributes": {
+							"placeholder": "value"
+						}
+					}
+				}
+			]
+		},
+		"V4RetryForV6TlsError": {
+			"title": "V4RetryForV6TlsError",
+			"description": "When the Zoom Workplace app resolves both IPv4 and IPv6 addresses, and the IPv6 TLS connection fails, the app will retry the connection using IPv4.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"EnableAsyncProxyResolve": {
+			"title": "EnableAsyncProxyResolve",
+			"description": "Resolve proxy settings asynchronously.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"EnableBatchProxyResolveViaAsync": {
+			"title": "EnableBatchProxyResolveViaAsync",
+			"description": "Resolve multiple proxy requests in a batch through the asynchronous path.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"EnableHandleRedirectProxy": {
+			"title": "EnableHandleRedirectProxy",
+			"description": "Handle the redirect proxy during proxy resolution.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"DisableLoginWithMagicCode": {
+			"title": "DisableLoginWithMagicCode",
+			"description": "Users are prevented from signing in to their Zoom account with the one-time magic code option.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"AU2_DisableGlobalUpdateButton": {
+			"title": "AU2_DisableGlobalUpdateButton",
+			"description": "Default policy is disabled. If this policy is enabled, the global update option at the top of the Zoom Workplace app will be disabled.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"DisableDesktopScreenshot": {
+			"title": "DisableDesktopScreenshot",
+			"description": "Disable all screenshot functions on the Zoom desktop app.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"DatabaseJournalDeleteMode": {
+			"title": "DatabaseJournalDeleteMode",
+			"description": "The Zoom desktop app will enable the \u2018journal_mode=DELETE\u2019 option in SQLite to enhance compatibility and performance in inefficient storage environments such as NFS or NAS.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"AutoStartMyNotes": {
+			"title": "AutoStartMyNotes",
+			"description": "The Zoom Workplace app will automatically start the My notes feature when a user joins a meeting.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"DisableMyNotes": {
+			"title": "DisableMyNotes",
+			"description": "When this policy is enabled, the Zoom Workplace app will disable My Notes.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"AlwaysUseDarkThemeForMeetings": {
+			"title": "AlwaysUseDarkThemeForMeetings",
+			"description": "Always use the dark theme for in-meeting surfaces.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"EnableNewHomePage": {
+			"title": "EnableNewHomePage",
+			"description": "Uses the WebView-based version of the Home tab in the Zoom Workplace app.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"AutoDetectedVoiceActivity": {
+			"title": "AutoDetectedVoiceActivity",
+			"description": "The desktop app will notify the user when voice activity is detected on specified apps to generate AI summaries and notes.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"EnableAutoFraming": {
+			"title": "EnableAutoFraming",
+			"description": "Enable the Auto-framing video setting, which automatically adjusts camera view to keep the user centered in the frame during video calls.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"SelfViewMode": {
+			"title": "SelfViewMode",
+			"description": "Set the default self-view option:\n0 - Show self-view in the gallery\n1- Hide self-view in the gallery\n2 - Float self-view over the gallery\nNote: Starting in version 7.2.0, SelfViewMode replaces HideSelfView. Older versions that do not support SelfViewMode continue to use HideSelfView. If both are set, SelfViewMode is used.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "string",
+					"options": {
+						"inputAttributes": {
+							"placeholder": "value"
+						}
+					}
+				}
+			]
+		},
+		"DisableWebinarAttendeeAudio": {
+			"title": "DisableWebinarAttendeeAudio",
+			"description": "Disable and remove the Computer Audio from the webinar audio options.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"AutoStartPhoneMyNotes": {
+			"title": "AutoStartPhoneMyNotes",
+			"description": "Automatically start My Notes in Zoom Phone.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"ReceiveNotificationsByKeyword": {
+			"title": "ReceiveNotificationsByKeyword",
+			"description": "Setting keywords as the basis for triggering message notifications.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "string",
+					"options": {
+						"inputAttributes": {
+							"placeholder": "value"
+						}
+					}
+				}
+			]
+		},
+		"MemorySaverEnabled": {
+			"title": "MemorySaverEnabled",
+			"description": "The Zoom Workplace app will apply Memory Saver for WebView recycle behavior. The recycle behavior can be controlled by the MemorySaverOptimization policy.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		},
+		"MemorySaverOptimization": {
+			"title": "MemorySaverOptimization",
+			"description": "This policy works in conjunction with MemorySaverEnabled and sets the Memory Saver optimization level for WebView recycling behavior.\nIf this policy is set to 1, the app will use a light optimization level.\nIf this policy is set to 2, the app will use the default optimization level.\nIf this policy is set to 3, the app will use an aggressive optimization level.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "string",
+					"options": {
+						"inputAttributes": {
+							"placeholder": "value"
+						}
+					}
+				}
+			]
+		},
+		"ForceEnableWebViewRecycle": {
+			"title": "ForceEnableWebViewRecycle",
+			"description": "The Zoom Workplace app will force WebView recycling to reclaim memory from supported WebView-based tabs in accordance with the configured recycle rules.",
+			"anyOf": [
+				{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "boolean"
+				}
+			]
+		}
     }
 }
